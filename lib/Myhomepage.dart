@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:startinggetx/firstPage.dart';
+import 'package:startinggetx/secondPage.dart';
 import 'Controller/tabController.dart';
 
 class Myhomepage extends StatelessWidget {
@@ -34,6 +35,7 @@ class Myhomepage extends StatelessWidget {
               );
 
             }),
+            //Increment Button
             GestureDetector(
               onTap: (){
                 controller.increaseX();
@@ -46,9 +48,10 @@ class Myhomepage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xFF89dad0)
                 ),
-                child: Center(child: Text("Tap ",style: TextStyle(fontSize: 20, color: Colors.white),)),
+                child: Center(child: Text("Tap To Increment ",style: TextStyle(fontSize: 20, color: Colors.white),)),
               ),
             ),
+            //FirstPage Button
             GestureDetector(
               onTap: (){
                 Get.to(()=>Firstpage());
@@ -64,8 +67,11 @@ class Myhomepage extends StatelessWidget {
                 child: Center(child: Text("Go to First Page",style: TextStyle(fontSize: 20, color: Colors.white),)),
               ),
             ),
+            //SecondPage Button
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Get.to(()=>SecondPage());
+              },
               child: Container(
                 margin: const EdgeInsets.all(20),
                 width: double.maxFinite,
@@ -74,7 +80,7 @@ class Myhomepage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Color(0xFF89dad0)
                 ),
-                child: Center(child: Text("Tap that asssss!!!",style: TextStyle(fontSize: 20, color: Colors.white),)),
+                child: Center(child: Text("Second Page",style: TextStyle(fontSize: 20, color: Colors.white),)),
               ),
             ),
             GestureDetector(
